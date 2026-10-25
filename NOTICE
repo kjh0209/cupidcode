@@ -1,0 +1,21 @@
+Cupid
+Copyright (c) 2026 Cupid Inc.
+
+Unless a folder says otherwise, the contents of this repository are licensed
+under the Apache License, Version 2.0 (see ./LICENSE).
+
+Folder-specific licenses:
+
+  cli/      MIT (see cli/LICENSE). The Cupid CLI is derived from MIT-licensed
+            software; copyright holders: Cupid Inc., Kilo Code, opencode.
+  vscode/   MIT (see vscode/LICENSE); copyright holders: Cupid Inc.,
+            Kilo Code, opencode. Portions are derived from Continue and are
+            licensed under the Apache License, Version 2.0
+            (see vscode/THIRD_PARTY_LICENSES/continue.txt).
+
+The Cupid CLI and VS Code extension binaries are distributed from
+downloads.cupidcode.ai under the same terms. Licenses of bundled third-party
+components are listed in THIRD-PARTY-NOTICES.md and shipped in the
+`licenses/` folder installed next to the binary.
+
+"Cupid" and the Cupid logo are not licensed under the above terms.

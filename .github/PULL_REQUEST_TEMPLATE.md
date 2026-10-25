@@ -1,0 +1,1 @@
+Thanks for taking the time. We don't accept pull requests in this repository for now: the code that ships is built from a private repository. Please open an issue describing the change instead; see CONTRIBUTING.md. This pull request will be closed.

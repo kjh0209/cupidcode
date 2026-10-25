@@ -1,0 +1,29 @@
+name: license-check
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  licenses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Required license files are present and unchanged
+        run: |
+          set -e
+          sha256sum -c .github/license-files.sha256
+          grep -q "Apache License" LICENSE
+          for f in cli/LICENSE vscode/LICENSE; do
+            grep -q "^MIT License" "$f"
+            grep -q "Copyright (c) 2026 Kilo Code" "$f"
+            grep -q "Copyright (c) 2025 opencode" "$f"
+          done
+          grep -q "Apache License" vscode/THIRD_PARTY_LICENSES/continue.txt
+      - name: No disallowed licenses declared
+        run: |
+          if grep -rIlE "SPDX-License-Identifier: *(A?GPL|LGPL|SSPL)" --exclude-dir=.git --exclude-dir=.github .; then
+            echo "Disallowed license identifier found"; exit 1
+          fi

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/kjh0209/cupidcode/blob/main/SECURITY.md
+    about: Please email security@cupidcode.ai instead of opening a public issue.
+  - name: Account, billing or credits
+    url: https://cupidcode.ai/support
+    about: Questions about your account or charges go to support, not public issues.
